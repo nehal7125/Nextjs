@@ -1,0 +1,14 @@
+Suspense means create to make it easier for developer to create apps that have improved loading indication and a more cohesive user experience it make it possible to halt indications and a more cohesive user experience.
+
+React does the initial page render and discovers a Suspense component. It then checks if any of the child components of that Suspense component are waiting for a promise to complete on any asynchronous data or resources. 
+
+A promise can either be pending, fulfilled, or rejected. If the promise is pending, React "suspends" the rendering of that particular component as well as its children. It does this by traversing up the tree until it finds the nearest Suspense component and rendering the fallback component specified by that component’s fallback property.
+
+
+Logged off 
+Worked on UI 
+Added Company and Task Section 
+Added drag and drop functionality 
+Worked on Auth 
+Added List of Company using API with axios  
+Copmlete completed Admin dashboard

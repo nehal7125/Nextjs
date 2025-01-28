@@ -11,9 +11,9 @@ interface Product {
 }
 
 const API: NextPage = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [error, setError] = useState<string | null>(null);
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [products, setProducts] = useState([]);
+  const [error, setError] = useState(null);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("darkMode", darkMode ? "true" : "false");
@@ -23,7 +23,6 @@ const API: NextPage = () => {
     const fetchData = async () => {
       try {
         const response = await fetch("https://fakestoreapi.com/products");
-
         if (!response.ok) {
           throw new Error("Network issue");
         }
@@ -49,7 +48,7 @@ const API: NextPage = () => {
         darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       } min-h-screen p-6`}
     >
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-item align-items bg-center mb-6">
         <h1 className="text-2xl font-bold">Product List</h1>
         <button
           className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 focus:outline-none"
